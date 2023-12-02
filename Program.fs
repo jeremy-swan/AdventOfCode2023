@@ -1,7 +1,7 @@
 ﻿open System
 open System.IO
 
-open Day1
+open Day2
 
 let readFile = sprintf "input/%s" >> File.ReadAllText
 let prepareFile (fileContent : string) = 
@@ -9,7 +9,7 @@ let prepareFile (fileContent : string) =
     |> fun x -> x.Split('\n')
     |> List.ofSeq
 
-let prepare = readFile >> prepareFile >> parseFile
+let prepare = readFile >> prepareFile
 
 let run part stage input func =
     input
@@ -19,7 +19,7 @@ let run part stage input func =
     printfn "==============================="
 
 
-run 1 "TEST" PART_1_TEST_INPUT part1
+run 1 "TEST" TEST_INPUT part1
 run 1 "REAL" REAL_INPUT part1
-run 2 "TEST" PART_2_TEST_INPUT part2
+run 2 "TEST" TEST_INPUT part2
 run 2 "REAL" REAL_INPUT part2

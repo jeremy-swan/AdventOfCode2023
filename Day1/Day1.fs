@@ -6,8 +6,6 @@ let PART_1_TEST_INPUT = "day1_part1_test.txt"
 let PART_2_TEST_INPUT = "day1_part2_test.txt"
 let REAL_INPUT = "day1_real.txt"
 
-let parseFile = id
-
 let parseInt (x : string) = 
     match Int32.TryParse(x) with
     | true, n -> Some n
